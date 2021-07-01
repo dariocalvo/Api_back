@@ -35,7 +35,7 @@ $app->add(function (Request $request, RequestHandlerInterface $handler): Respons
     $requestHeaders = $request->getHeaderLine('Access-Control-Request-Headers');
 
     $response = $response->withHeader('Access-Control-Allow-Origin', '*');
-    $response = $response->withHeader('Access-Control-Allow-Methods', 'get,post');
+    $response = $response->withHeader('Access-Control-Allow-Methods', 'get, POST, post');
     $response = $response->withHeader('Access-Control-Allow-Headers', $requestHeaders);
 
     // Optional: Allow Ajax CORS requests with Authorization header
@@ -44,8 +44,8 @@ $app->add(function (Request $request, RequestHandlerInterface $handler): Respons
     return $response;
 });
 
-$app->post('/NuevoUsuario[/]', \UsuarioController::class . ':GuardarUsuario');
-$app->post('/BuscarUsuario[/]', \UsuarioController::class . ':BuscarUsuario');
+$app->POST('/NuevoUsuario[/]', \UsuarioController::class . ':GuardarUsuario');
+$app->POST('/BuscarUsuario[/]', \UsuarioController::class . ':BuscarUsuario');
 $app->post('/BajaUsuario[/]', \UsuarioController::class . ':BorrarUsuario');
 $app->post('/PedirRubros[/]', \Rubro::class . ':TraerRubros');
 $app->post('/FiltrarPublicaciones[/]', \PublicacionController::class . ':FiltrarRubros');
