@@ -1,0 +1,217 @@
+[33mcommit 34c875af5b6f0ad7fcebb63c75edeee5383c49d1[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Thu Jul 1 00:40:41 2021 -0300
+
+    subir back
+
+[33mcommit 25a25cc0c2fa5e95c60871eb3a841ac2647173a6[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Wed Jun 9 22:48:11 2021 -0300
+
+    ...
+
+[33mcommit 61e24780c63e5ec55adc85c9d536fd7413fb9fba[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Tue Jun 8 20:03:38 2021 -0300
+
+    Cambio de rutas
+
+[33mcommit d99174b4e2c30914b12a59f400e93a9720027419[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Tue Jun 8 19:52:43 2021 -0300
+
+    Correcciones rutas
+
+[33mcommit c9907f018e63b316c7611e93bbc8c99f14a9f7a8[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Tue Jun 8 19:41:44 2021 -0300
+
+    ruta de guardado actualizadas
+
+[33mcommit e172a62ba35ed8674dabde26b166ed29b8400a1b[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Tue Jun 8 19:34:36 2021 -0300
+
+    cambio ruta de guardado
+
+[33mcommit 8c9b52e2eba1e877a33de9cfea9240fd013d99e6[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Tue Jun 8 19:15:19 2021 -0300
+
+    Borrado trash
+
+[33mcommit 8067e270403096107fe065d8d3ff6566d7dede0b[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Tue Jun 8 19:13:32 2021 -0300
+
+    borrado trash
+
+[33mcommit dabad2cf9fdeefeb61bfd126fc2fa51ba5561eaf[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Tue Jun 8 19:00:44 2021 -0300
+
+    Servidor funcional 100%
+
+[33mcommit 489da7f0024a448385071d732a6b1796c0e06e99[m
+Merge: f30f85a e442012
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Wed Jun 2 06:15:51 2021 -0300
+
+    Merge branch 'master' of https://github.com/dariocalvo/mi-app-edi-back
+
+[33mcommit f30f85a37da169e7cad32d0fcf76b235f1160a4d[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Wed Jun 2 06:13:23 2021 -0300
+
+    ...
+
+[33mcommit a9daa69c27691ea2e793bed2726429d90519afc1[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Wed Jun 2 06:02:48 2021 -0300
+
+    ...
+
+[33mcommit e4420122e80959cc21190ab0bbf25e5c5d16c7ab[m
+Author: dariocalvo <82620235+dariocalvo@users.noreply.github.com>
+Date:   Wed Jun 2 05:54:07 2021 -0300
+
+    Create Registro.php
+
+[33mcommit 5689172d41ad35753492c95034418bc2902c361e[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Wed Jun 2 05:39:53 2021 -0300
+
+    ...
+
+[33mcommit c9b41fd6d772023e85fc5793e3394251b561510b[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Wed Jun 2 05:29:44 2021 -0300
+
+    ...
+
+[33mcommit bdbf440e21883a91a20e8c186e2d848fe3b0c647[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Wed Jun 2 05:28:13 2021 -0300
+
+    ...
+
+[33mcommit 585b17c6450a6b016200df4b2492f9639fd2ef42[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Wed Jun 2 05:16:46 2021 -0300
+
+    ...
+
+[33mcommit 75e1772a73cac85c84c2dd5fb790f7060b968298[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Wed Jun 2 05:00:56 2021 -0300
+
+    ...
+
+[33mcommit 6dece000709de641eea0c3cf161b81f84b6eaf30[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Wed Jun 2 04:53:48 2021 -0300
+
+    ...
+
+[33mcommit 14b345797b1cbb3726c06e5cad20f61226a3d3af[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Wed Jun 2 04:49:04 2021 -0300
+
+    ...
+
+[33mcommit 2af900b6b07763cda1faa1de01f7bd89fc112f43[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Wed Jun 2 04:41:48 2021 -0300
+
+    ...
+
+[33mcommit 0e8fd1e93dab1aaa5d0197e500f6d418ea57ece5[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Wed Jun 2 04:31:18 2021 -0300
+
+    ...
+
+[33mcommit 5eaa09d5b970c5795a48b6718436919c8dbbfa82[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Wed Jun 2 03:31:59 2021 -0300
+
+    ...
+
+[33mcommit 7098d2d66f2f4aa9fd0d485a5a52bbd18a43e932[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Wed Jun 2 03:23:31 2021 -0300
+
+    ...
+
+[33mcommit 9702204d21eb192683f7b4e2acb284f36174aa21[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Tue Jun 1 23:54:52 2021 -0300
+
+    ...
+
+[33mcommit 3e4be3faa44c7bf25de9b32b3d01b2927246911a[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Tue Jun 1 23:46:56 2021 -0300
+
+    ...
+
+[33mcommit 3b598c9aae41a16e6ba1a73f860a5f7797133a2b[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Tue Jun 1 23:43:35 2021 -0300
+
+    Prubas respuestas
+
+[33mcommit 8bec467c942ff103ef2447c2b9ec73fb19c21b44[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Tue Jun 1 22:53:33 2021 -0300
+
+    Pruebas respuestas
+
+[33mcommit 521d5e3df95733067874c8e551d5791b19067a04[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Mon May 31 03:57:52 2021 -0300
+
+    headers agregados
+
+[33mcommit c7c0126a3d783f2be5f88f76cc13d8fe563fffd8[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Mon May 31 03:47:54 2021 -0300
+
+    Cabecera agregada
+
+[33mcommit 451ae725d44557e78421ccd20c93fbd5bc4b3191[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Mon May 31 03:44:21 2021 -0300
+
+    Cabecera agregada
+
+[33mcommit 1beb26e7d2c30087aa3504f27169cb1323bb12f9[m
+Merge: 1087526 5836f8c
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Mon May 31 03:35:44 2021 -0300
+
+    Merge branch 'master' of https://github.com/dariocalvo/mi-app-edi-back
+
+[33mcommit 10875268198448597bed5b0b9d22d01790abee53[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Mon May 31 03:35:16 2021 -0300
+
+    Cabecera agregada
+
+[33mcommit 5836f8c4cbb8978439beead8ee4cc4956a7eac1e[m
+Author: dariocalvo <82620235+dariocalvo@users.noreply.github.com>
+Date:   Fri May 28 03:29:19 2021 -0300
+
+    Rename Index.php to index.php
+
+[33mcommit 9393f3ecb22524b1b38968ca8691afd2bb8cc7cd[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Fri May 28 01:31:49 2021 -0300
+
+    Nuevo commit
+
+[33mcommit 0691819f94d2dc29d8bbbb8a5957f7e6e0c9f1be[m
+Author: Dario Calvo <humildin2011@gmail.com>
+Date:   Fri May 28 01:07:09 2021 -0300
+
+    nuevos archivos
