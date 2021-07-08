@@ -44,10 +44,18 @@ $app->add(function (Request $request, RequestHandlerInterface $handler): Respons
     return $response;
 });
 
-$app->POST('/NuevoUsuario[/]', \UsuarioController::class . ':GuardarUsuario');
-$app->POST('/BuscarUsuario[/]', \UsuarioController::class . ':BuscarUsuario');
-$app->post('/BajaUsuario[/]', \UsuarioController::class . ':BorrarUsuario');
-$app->post('/PedirRubros[/]', \Rubro::class . ':TraerRubros');
-$app->post('/FiltrarPublicaciones[/]', \PublicacionController::class . ':FiltrarRubros');
+$app->group('/Usuario', function (RouteCollectorProxy $group) {
+    $group->POST('/Buscar[/]', \Usuario::class . ':BuscarUsuario');
+    $group->POST('/Nuevo[/]', \UsuarioController::class . ':GuardarUsuario');
+    $group->POST('/Baja[/]', \UsuarioController::class . ':BorrarUsuario');
+});
+
+$app->group('/Rubro', function (RouteCollectorProxy $group) {
+    $group->post('/Listar[/]', \Rubro::class . ':TraerRubros');
+});
+
+$app->group('/Publicacion', function (RouteCollectorProxy $group) {
+    $group->post('/Filtrar[/]', \PublicacionController::class . ':FiltrarRubros');
+});
 
 $app->run();

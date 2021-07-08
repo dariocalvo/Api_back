@@ -60,12 +60,13 @@ class Publicacion {
         $this->$control = "";
     }
 
-    public function TraerPublicaciones($request, $response, $args){
+    public static function TraerPublicaciones($request, $response, $args){
         $AccesoDatos = ConeccionBD::conectar();
         $consulta = $AccesoDatos->sql("SELECT * FROM publicaciones");
         $consulta->execute();
         $response->getBody()->Write(json_encode($consulta->fetchAll(PDO::FETCH_CLASS)));
     return $response; 
     }
+
 }
 ?>
