@@ -35,7 +35,7 @@ $app->add(function (Request $request, RequestHandlerInterface $handler): Respons
     $requestHeaders = $request->getHeaderLine('Access-Control-Request-Headers');
 
     $response = $response->withHeader('Access-Control-Allow-Origin', '*');
-    $response = $response->withHeader('Access-Control-Allow-Methods', 'get, POST, post');
+    $response = $response->withHeader('Access-Control-Allow-Methods', 'get, post');
     $response = $response->withHeader('Access-Control-Allow-Headers', $requestHeaders);
 
     // Optional: Allow Ajax CORS requests with Authorization header
@@ -51,11 +51,11 @@ $app->group('/Usuario', function (RouteCollectorProxy $group) {
 });
 
 $app->group('/Rubro', function (RouteCollectorProxy $group) {
-    $group->post('/Listar[/]', \Rubro::class . ':TraerRubros');
+    $group->POST('/Listar[/]', \Rubro::class . ':TraerRubros');
 });
 
 $app->group('/Publicacion', function (RouteCollectorProxy $group) {
-    $group->post('/Filtrar[/]', \PublicacionController::class . ':FiltrarRubros');
+    $group->POST('/Filtrar[/]', \PublicacionController::class . ':FiltrarRubros');
 });
 
 $app->run();
