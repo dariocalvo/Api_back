@@ -51,7 +51,7 @@ $app->group('/Usuario', function (RouteCollectorProxy $group) {
 });
 
 $app->group('/Rubro', function (RouteCollectorProxy $group) {
-    $group->POST('/Listar[/]', \Rubro::class . ':TraerRubros');
+    $group->POST('/Listar[/]', \RubroController::class . ':ListarRubros');
 });
 
 $app->group('/Publicacion', function (RouteCollectorProxy $group) {

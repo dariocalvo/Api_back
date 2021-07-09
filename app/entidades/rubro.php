@@ -18,7 +18,7 @@ class Rubro {
         $this->rubro = "";
     }
 
-    public function TraerRubros($request, $response, $args){
+    public static function TraerRubros($request, $response, $args){
         $AccesoDatos = ConeccionBD::conectar();
         $consulta = $AccesoDatos->sql("SELECT * FROM rubros");
         $consulta->execute();
