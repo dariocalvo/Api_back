@@ -6,7 +6,7 @@ class RubroController{
 */
 
     public function ListarRubros($request, $response, $args){
-        Rubro::TraerRubros();
+        Rubro::TraerRubros($request, $response, $args);
         return $response;
     }
 }
