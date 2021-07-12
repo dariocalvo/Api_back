@@ -18,6 +18,7 @@ require __DIR__ . '/entidades/usuario.php';
 require __DIR__ . '/entidades/rubro.php';
 require __DIR__ . '/controladores/UsuarioController.php';
 require __DIR__ . '/controladores/PublicacionController.php';
+require __DIR__ . '/controladores/RubroController.php';
 require __DIR__ . '/helper/utilidades.php';
 require __DIR__ . '/datos/accesoBD.php';
 
