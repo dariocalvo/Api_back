@@ -63,7 +63,7 @@ class Usuario extends Persona {
         return $response;
     }
 
-    public static function BuscarUsuario($request, $response, $args){
+    public static function BuscarBD($request, $response, $args){
         
         $Recibido = $request->getParsedBody();
         $UsuarioAbuscar = filter_var(strtolower($Recibido['usuario']), FILTER_SANITIZE_STRING);

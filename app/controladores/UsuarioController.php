@@ -36,6 +36,11 @@ class UsuarioController{
         return $response;        
     }
 
+    public function BuscarUsuario($request, $response, $args){
+        Usuario::BuscarBD($request, $response, $args);
+        return $response;        
+    }
+
 }
 
 ?>
