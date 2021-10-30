@@ -5,6 +5,17 @@ class PublicacionController{
     Filtrado de publicaciones por rubro recibido
 */
 
+    public function FiltrarTodasPorRubro($request, $response, $args){
+        $Recibido = $request->getParsedBody();
+        $Rubro = intval($Recibido['id_rubro']);
+        $coneccion = ConeccionBD::conectar();
+        $consulta = $coneccion->sql("SELECT * FROM publicaciones where Id_rubro =?");
+        $consulta->execute([$Rubro]);
+        $resultado = $consulta->fetchAll(PDO::FETCH_OBJ);
+        $response->getBody()->Write(json_encode($resultado));
+        return $response;
+    }
+    
     public function FiltrarRubros($request, $response, $args){
         
         $Recibido = $request->getParsedBody();
@@ -24,6 +35,26 @@ class PublicacionController{
   
         return $response;
 
+    }
+
+    public function BloquearPublicacion($request, $response, $args){
+        $Recibido = $request->getParsedBody();
+        $Publicacion = intval($Recibido['id_publicacion']);
+        $Autorizacion = intval($Recibido['autorizacion']);
+        Publicacion::bloquearPub($Publicacion, $Autorizacion, $response);
+        $response = $this->FiltrarID($request, $response, $args);
+        return $response;
+    }   
+
+    public function EditarPublicacionEDI($request, $response, $args){
+        $Recibido = $request->getParsedBody();
+        $PublicacionEditada = New Publicacion();
+        $PublicacionEditada->id_publicacion = $Recibido['id_publicacion'];
+        $PublicacionEditada->titulo = $Recibido['titulo'];
+        $PublicacionEditada->contenido = $Recibido['contenido'];
+        $PublicacionEditada->pie = $Recibido['pie'];
+        $PublicacionEditada->EditarBDEDI($PublicacionEditada, $response);
+        return $response; 
     }
 }
 ?>

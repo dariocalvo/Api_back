@@ -53,10 +53,14 @@ $app->group('/Usuario', function (RouteCollectorProxy $group) {
 
 $app->group('/Rubro', function (RouteCollectorProxy $group) {
     $group->POST('/Listar[/]', \RubroController::class . ':ListarRubros');
+    $group->GET('/Listar[/]', \RubroController::class . ':ListarRubros');
 });
 
 $app->group('/Publicacion', function (RouteCollectorProxy $group) {
-    $group->POST('/Filtrar[/]', \PublicacionController::class . ':FiltrarRubros');
+    $group->POST('/Filtrar/Rubro/todas[/]', \PublicacionController::class . ':FiltrarTodasPorRubro');
+    $group->POST('/Filtrar/Rubro[/]', \PublicacionController::class . ':FiltrarRubros');
+    $group->POST('/Editar[/]', \PublicacionController::class . ':EditarPublicacion');
+    $group->POST('/Bloquear[/]', \PublicacionController::class . ':BloquearPublicacion');
 });
 
 $app->run();

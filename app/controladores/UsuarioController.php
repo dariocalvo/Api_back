@@ -41,6 +41,14 @@ class UsuarioController{
         return $response;        
     }
 
+    public function BajaUsuario($request, $response, $args){
+        $Recibido = $request->getParsedBody();
+        $UsuarioBaja = filter_var(strtolower($Recibido['usuario']), FILTER_SANITIZE_STRING);
+        Usuario::bajaBD($UsuarioBaja, $response);
+        return $response;        
+    }
+    
+
 }
 
 ?>
