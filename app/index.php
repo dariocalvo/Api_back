@@ -16,6 +16,7 @@ require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/entidades/persona.php';
 require __DIR__ . '/entidades/usuario.php';
 require __DIR__ . '/entidades/rubro.php';
+require __DIR__ . '/entidades/publicacion.php';
 require __DIR__ . '/controladores/UsuarioController.php';
 require __DIR__ . '/controladores/PublicacionController.php';
 require __DIR__ . '/controladores/RubroController.php';
