@@ -42,7 +42,7 @@ class PublicacionController{
         $Publicacion = intval($Recibido['id_publicacion']);
         $Autorizacion = intval($Recibido['autorizacion']);
         Publicacion::bloquearPub($Publicacion, $Autorizacion, $response);
-        $response = $this->FiltrarID($request, $response, $args);
+        //$response = $this->FiltrarID($request, $response, $args);
         return $response;
     }   
 
