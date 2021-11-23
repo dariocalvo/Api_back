@@ -37,6 +37,31 @@ class PublicacionController{
 
     }
 
+    public function GuardarPublicacion($request, $response, $args){
+        $Recibido = $request->getParsedBody();
+        $NuevaPublicacion = New Publicacion();
+        $NuevaPublicacion->id_usuario = $Recibido['id_usuario'];
+        $NuevaPublicacion->id_rubro = $Recibido['id_rubro'];
+        $NuevaPublicacion->titulo = $Recibido['titulo'];
+        $NuevaPublicacion->contenido = $Recibido['contenido'];
+        $NuevaPublicacion->pie = $Recibido['pie'];
+        
+        if (!isset($Recibido['imagen'])){
+            $archivo = $request->getUploadedFiles();
+            $imagen = $archivo['imagen'];
+            $ruta = $NuevaPublicacion->GetRuta();
+            $nombre = $Recibido['id_usuario'].$Recibido['id_rubro'].implode(getdate());
+            $NuevaPublicacion->imagen = utilidades::GuardarImagen($imagen, $nombre, $ruta);
+        }else{
+            $NuevaPublicacion->imagen = "";
+        }
+        $NuevaPublicacion->guardarBD($NuevaPublicacion, $response);
+        return $response;
+    }
+
+
+
+
     public function BloquearPublicacion($request, $response, $args){
         $Recibido = $request->getParsedBody();
         $Publicacion = intval($Recibido['id_publicacion']);
