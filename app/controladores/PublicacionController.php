@@ -45,7 +45,7 @@ class PublicacionController{
         $NuevaPublicacion->titulo = $Recibido['titulo'];
         $NuevaPublicacion->contenido = $Recibido['contenido'];
         $NuevaPublicacion->pie = $Recibido['pie'];
-        
+        /*
         if (!isset($Recibido['imagen'])){
             $archivo = $request->getUploadedFiles();
             $imagen = $archivo['imagen'];
@@ -55,6 +55,8 @@ class PublicacionController{
         }else{
             $NuevaPublicacion->imagen = "";
         }
+        */
+        $NuevaPublicacion->imagen = "";
         $NuevaPublicacion->guardarBD($NuevaPublicacion, $response);
         return $response;
     }
