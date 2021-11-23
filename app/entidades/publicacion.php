@@ -114,7 +114,7 @@ class Publicacion {
     public static function guardarBD($Publicacion, $response){
         try{
             $coneccion = ConeccionBD::conectar();
-            $ingreso = $coneccion->sql("INSERT INTO publicaciones (id_usuario, id_rubro, titulo, id_imagen, contenido, pie) VALUES (?, ?, ?, ?, ?, ?)");
+            $ingreso = $coneccion->sql("INSERT INTO publicaciones (id_usuario, id_rubro, titulo, imagen, contenido, pie) VALUES (?, ?, ?, ?, ?, ?)");
             $ingreso->execute([$Publicacion->id_usuario, $Publicacion->id_rubro, $Publicacion->titulo, $Publicacion->imagen, $Publicacion->contenido, $Publicacion->pie]);
             $response->getBody()->Write('Has publicado con exito...');
         }catch(PDOException $e) {
