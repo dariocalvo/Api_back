@@ -49,7 +49,7 @@ $app->add(function (Request $request, RequestHandlerInterface $handler): Respons
 $app->group('/Usuario', function (RouteCollectorProxy $group) {
     $group->POST('/Buscar[/]', \UsuarioController::class . ':BuscarUsuario');
     $group->POST('/Nuevo[/]', \UsuarioController::class . ':GuardarUsuario');
-    $group->POST('/Baja[/]', \UsuarioController::class . ':BorrarUsuario');
+    $group->POST('/Baja[/]', \UsuarioController::class . ':BajaUsuario');
 });
 
 $app->group('/Rubro', function (RouteCollectorProxy $group) {
