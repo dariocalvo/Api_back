@@ -5,6 +5,15 @@ class PublicacionController{
     Filtrado de publicaciones por rubro recibido
 */
 
+    public function FiltrarActivas($request, $response, $args){
+        $coneccion = ConeccionBD::conectar();
+        $consulta = $coneccion->sql("SELECT * FROM publicaciones where habilitada = 1");
+        $consulta->execute();
+        $resultado = $consulta->fetchAll(PDO::FETCH_OBJ);
+        $response->getBody()->Write(json_encode($resultado));
+        return $response;
+    }
+
     public function FiltrarTodasPorRubro($request, $response, $args){
         $Recibido = $request->getParsedBody();
         $Rubro = intval($Recibido['id_rubro']);

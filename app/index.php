@@ -58,6 +58,7 @@ $app->group('/Rubro', function (RouteCollectorProxy $group) {
 });
 
 $app->group('/Publicacion', function (RouteCollectorProxy $group) {
+    $group->GET('/Activas[/]', \PublicacionController::class . ':FiltrarActivas');
     $group->POST('/Filtrar/Rubro/todas[/]', \PublicacionController::class . ':FiltrarTodasPorRubro');
     $group->POST('/Filtrar/Rubro[/]', \PublicacionController::class . ':FiltrarRubros');
     $group->POST('/EditarEDI[/]', \PublicacionController::class . ':EditarPublicacionEDI');
