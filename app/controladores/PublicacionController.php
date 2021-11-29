@@ -15,6 +15,16 @@ class PublicacionController{
         return $response;
     }
 
+    public function ObtenerUltimoId($request, $response, $args){
+        $coneccion = ConeccionBD::conectar();
+        $consulta = $coneccion->sql
+        ("SELECT MAX('id_publicacion') as ('id_publicacion')from publicaciones");
+        $consulta->execute();
+        $resultado = $consulta->fetchAll(PDO::FETCH_OBJ);
+        $response->getBody()->Write(json_encode($resultado));
+        return $response;
+    }
+
     public function FiltrarTodasPorRubro($request, $response, $args){
         $Recibido = $request->getParsedBody();
         $Rubro = intval($Recibido['id_rubro']);

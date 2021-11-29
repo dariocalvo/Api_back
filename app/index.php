@@ -64,6 +64,7 @@ $app->group('/Publicacion', function (RouteCollectorProxy $group) {
     $group->POST('/EditarEDI[/]', \PublicacionController::class . ':EditarPublicacionEDI');
     $group->POST('/Bloquear[/]', \PublicacionController::class . ':BloquearPublicacion');
     $group->POST('/Nueva[/]', \PublicacionController::class . ':GuardarPublicacion');
+    $group->GET('/ObtenerId[/]', \PublicacionController::class . ':ObtenerUltimoId');
 });
 
 $app->run();
