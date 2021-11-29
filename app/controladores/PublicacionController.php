@@ -18,7 +18,7 @@ class PublicacionController{
     public function ObtenerUltimoId($request, $response, $args){
         $coneccion = ConeccionBD::conectar();
         $consulta = $coneccion->sql
-        ("SELECT MAX(`id_publicacion`) FROM `publicaciones`");
+        ("SELECT * FROM `publicaciones`");
         $consulta->execute();
         $resultado = $consulta->fetchAll(PDO::FETCH_OBJ);
         $response->getBody()->Write(json_encode($resultado));
