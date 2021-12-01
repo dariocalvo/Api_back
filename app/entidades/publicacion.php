@@ -94,7 +94,7 @@ class Publicacion {
             $bloqueo->execute([$autorizacion, $id_publicacion]);
             //$response->getBody()->Write("Publicacion bloqueada...");
         }catch(PDOException $e) {
-            $response->getBody()->Write("Error: " . $e->getMessage());
+            $response->getBody()->Write(json_encode("Error: " . $e->getMessage()));
         }
         return $response;
     }
@@ -104,9 +104,9 @@ class Publicacion {
             $coneccion = ConeccionBD::conectar();
             $ediciom = $coneccion->sql("UPDATE publicaciones SET fecha = current_timestamp, titulo =?, contenido= ?, pie =? WHERE id_publicacion =?");
             $ediciom->execute([$Publicacion->titulo, $Publicacion->contenido, $Publicacion->pie, $Publicacion->id_publicacion]);
-            $response->getBody()->Write('Publicacion editada con exito...');
+            $response->getBody()->Write(json_encode('Publicacion editada con exito...'));
         }catch(PDOException $e) {
-            $response->getBody()->Write("Error: " . $e->getMessage());
+            $response->getBody()->Write(json_encode("Error: " . $e->getMessage()));
         }
         return $response;
     }
@@ -116,9 +116,9 @@ class Publicacion {
             $coneccion = ConeccionBD::conectar();
             $ingreso = $coneccion->sql("INSERT INTO publicaciones (id_usuario, id_rubro, titulo, contenido, pie) VALUES (?, ?, ?, ?, ?)");
             $ingreso->execute([$Publicacion->id_usuario, $Publicacion->id_rubro, $Publicacion->titulo, $Publicacion->contenido, $Publicacion->pie]);
-            $response->getBody()->Write('Has publicado con exito...');
+            $response->getBody()->Write(json_encode('Has publicado con exito...'));
         }catch(PDOException $e) {
-            $response->getBody()->Write("Error: " . $e->getMessage());
+            $response->getBody()->Write(json_encode("Error: " . $e->getMessage()));
         }
         return $response;
     }

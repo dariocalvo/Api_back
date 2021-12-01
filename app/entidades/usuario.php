@@ -77,9 +77,9 @@ class Usuario extends Persona {
                 $ingreso = $coneccion->sql("UPDATE usuarios SET nombre =?, email =?, imagen =? WHERE username =?");
                 $ingreso->execute([$Usuario->nombre, $Usuario->email, $Usuario->avatar, $Usuario->usuario]);
             }
-                $response->getBody()->Write('Tus datos han sido guardados '.$Usuario->nombre.'.');
+                $response->getBody()->Write(json_encode('Tus datos han sido guardados '.$Usuario->nombre.'.'));
         }catch(PDOException $e) {
-            $response->getBody()->Write("Error: " . $e->getMessage());
+            $response->getBody()->Write(json_encode("Error: " . $e->getMessage()));
         }
         return $response;
     }
@@ -91,7 +91,7 @@ class Usuario extends Persona {
             $consulta->execute([$Usuario]);
             $response->getBody()->Write(json_encode("Tu cuenta ha sido dada de baja con exito!"));
         }catch(PDOException $e) {
-            $response->getBody()->Write("Error: " . $e->getMessage());
+            $response->getBody()->Write(json_encode("Error: " . $e->getMessage()));
         }
         return $response;
     }
@@ -101,7 +101,7 @@ class Usuario extends Persona {
             $coneccion = ConeccionBD::conectar();
             $consulta = $coneccion->sql("DELETE FROM `usuarios` WHERE id_usuario =?");
             $consulta->execute([$Usuario]);
-            $response->getBody()->Write("El usuario ha sido eliminado con exito!\n");
+            $response->getBody()->Write(json_encode("El usuario ha sido eliminado con exito!\n"));
         }catch(PDOException $e) {
             $response->getBody()->Write("Error: " . $e->getMessage());
         }
@@ -133,7 +133,7 @@ class Usuario extends Persona {
                 $response->getBody()->Write(json_encode($resultado));
             }
         }catch(PDOException $e) {
-            $response->getBody()->Write("Error: " . $e->getMessage());
+            $response->getBody()->Write(json_encode("Error: " . $e->getMessage()));
         }    
         return $response;
     }
