@@ -89,7 +89,7 @@ class Usuario extends Persona {
             $coneccion = ConeccionBD::conectar();
             $consulta = $coneccion->sql("UPDATE `usuarios` SET activo = 0 WHERE username =?");
             $consulta->execute([$Usuario]);
-            $response->getBody()->Write("Tu cuenta ha sido dada de baja con exito!");
+            $response->getBody()->Write(json_encode("Tu cuenta ha sido dada de baja con exito!"));
         }catch(PDOException $e) {
             $response->getBody()->Write("Error: " . $e->getMessage());
         }
