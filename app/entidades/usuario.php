@@ -60,13 +60,13 @@ class Usuario extends Persona {
             $coneccion = ConeccionBD::conectar();
             $ingreso = $coneccion->sql("INSERT INTO usuarios (nombre, email, username, password, generador_pass, imagen, permiso) VALUES (?, ?, ?, ?, ?, ?, ?)");
             $ingreso->execute([$Usuario->nombre, $Usuario->email, $Usuario->usuario, $Usuario->pass, $Usuario->passBy, $Usuario->avatar, $Usuario->privilegio]);
-            $response->getBody()->Write(json_encode("Registro exitoso de ".$Usuario->nombre.".\n"));
+            $response->getBody()->Write(json_encode("Registro exitoso de ".$Usuario->nombre."."));
         }catch(PDOException $e) {
             $response->getBody()->Write(json_encode("Error: " . $e->getMessage()));
         }
         return $response;
     }
-
+     
     public function editarBD($Usuario, $response){
         try{
             $coneccion = ConeccionBD::conectar();
@@ -99,7 +99,7 @@ class Usuario extends Persona {
     public static function eliminarBD($Usuario, $response){
         try{
             $coneccion = ConeccionBD::conectar();
-            $consulta = $coneccion->sql("DELETE FROM `usuarios` WHERE id_usuario =?");
+            $consulta = $coneccion->sql("DELETE FROM `usuarios` WHERE username =?");
             $consulta->execute([$Usuario]);
             $response->getBody()->Write(json_encode("El usuario ha sido eliminado con exito!\n"));
         }catch(PDOException $e) {
